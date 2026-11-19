@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="scale.css" />
+    <script src="scale.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <header class="page-header">
+        <h1>BMI calculator</h1>
+        <p class="intro">
+          Enter your height and weight to calculate your body mass index.
+        </p>
+      </header>
+
+      <form id="bmi-form">
+        <div class="fields">
+          <div class="field">
+            <label for="height">Height <span>CM</span></label>
+            <input
+              id="height"
+              name="height"
+              type="number"
+              min="1"
+              step="any"
+              placeholder="e.g. 170"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="weight">Weight <span>KG</span></label>
+            <input
+              id="weight"
+              name="weight"
+              type="number"
+              min="1"
+              step="any"
+              placeholder="e.g. 65"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <p id="error-message" class="error" role="alert" hidden></p>
+
+      <section id="result" class="result" aria-live="polite" hidden>
+        <div class="result-heading">
+          <div>
+            <p class="result-label">YOUR BMI</p>
+            <p class="bmi-value"><strong id="bmi-number"></strong></p>
+          </div>
+          <p id="bmi-category" class="category"></p>
+        </div>
+        <p id="bmi-explanation"></p>
+        <h3>Healthy next steps</h3>
+        <ul id="advice-list"></ul>
+        <p class="disclaimer">
+          BMI is a screening measure, not a diagnosis. It does not account for
+          factors such as muscle mass, age, or pregnancy. Talk with a healthcare
+          professional for advice that fits you.
+        </p>
+      </section>
+
+      <p class="scale-note">
+        Adult BMI ranges: underweight below 18.5, healthy weight 18.5-24.9,
+        overweight 25-29.9, and obesity 30 or higher.
+      </p>
+    </main>
+  </body>
+</html>

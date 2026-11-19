@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 20px;
+  background: #f4f4f1;
+  color: #252b29;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+  width: min(100%, 600px);
+  margin: 0 auto;
+  padding: 36px;
+  border: 1px solid #e2e3de;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+h1 {
+  margin: 0;
+  color: #252b29;
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.intro {
+  margin: 10px 0 0;
+  color: #666d69;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  color: #343b37;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+label span {
+  color: #707873;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid #cfd4d0;
+  border-radius: 7px;
+  background: #fff;
+  color: #252b29;
+  font: inherit;
+}
+
+input::placeholder {
+  color: #929995;
+}
+
+input:focus {
+  border-color: #497c68;
+  outline: 2px solid rgba(73, 124, 104, 0.18);
+  outline-offset: 1px;
+}
+
+button {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  background: #356a57;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2b5948;
+}
+
+button:focus-visible {
+  outline: 3px solid #9dbdad;
+  outline-offset: 2px;
+}
+
+.result {
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px solid #dce5df;
+  border-radius: 9px;
+  background: #f7faf8;
+}
+
+.result-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.result-label {
+  margin: 0 0 4px;
+  color: #68746d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.bmi-value {
+  margin: 0;
+  color: #244b3b;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.category {
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: #e8f0eb;
+  color: #315d49;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+#bmi-explanation {
+  margin: 0 0 20px;
+  color: #4f5953;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.result ul {
+  margin: 0;
+  padding-left: 21px;
+}
+
+.result li {
+  margin-bottom: 8px;
+  color: #4f5953;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.disclaimer {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #dfe6e1;
+  color: #68716c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.error {
+  margin: 14px 0 0;
+  color: #a33228;
+  font-weight: 600;
+}
+
+.scale-note {
+  margin: 18px 0 0;
+  color: #68716c;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 24px 14px;
+  }
+
+  .calculator {
+    padding: 24px 20px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}
